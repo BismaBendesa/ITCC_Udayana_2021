@@ -1,0 +1,32 @@
+// font import
+@font-face {
+  font-family: "Consolas";
+  src: url(./../assets/font/CONSOLAB.TTF) format('ttf');
+}
+@font-face {
+  font-family: "Courier new";
+  src: url(./../assets/font/cour.ttf) format('ttf');
+}
+@font-face {
+  font-family: "Consolas";
+  src: url(./../assets/font/CONSOLAB.TTF) format('TTF');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Courier new";
+  src: url(./../../assets/font/COURB.ttf) format('ttf');
+  font-weight: bold;
+}
+
+// local variable
+$theme-color : #EEFBF7;
+$primary-color : #000000;
+$accent-color : #57BF9A;
+
+// custom mixin
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

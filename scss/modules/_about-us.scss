@@ -1,0 +1,331 @@
+// header
+.au-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 3.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navigation navigation"
+    "header-text header-img";
+}
+
+.navigation { grid-area: navigation; }
+
+.header-text { grid-area: header-text; }
+
+.header-img { grid-area: header-img;}
+
+.au-header{
+  width : 100%;
+  padding: 0px 5%;
+}
+
+.header-text{
+  h1{
+    font-weight: bold;
+  }
+}
+// end header
+
+// why
+.au-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2.5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "why-text why-img";
+}
+
+.why-text { grid-area: why-text; }
+
+.why-img { grid-area: why-img; }
+
+.au-why{
+  width : 100%;
+  padding: 0px 5%;
+  margin-top: 200px;
+}
+
+.why-text{
+  h1{
+    font-size: 50px;
+    margin-bottom: 70px;
+
+    span{
+      font-family: "Courier new";
+    }
+  }
+  .bcs{
+    @include flexbox(row, flex-start, center);
+    margin: 40px;
+    p{
+      font-size: 24px;
+      margin-left: 30px;
+    }
+  }
+}
+
+.why-img{
+  @include flexbox(row, center, center);
+}
+// end why
+
+// our profile
+.au-our-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .5fr 0.7fr;
+  grid-auto-columns: 1fr;
+  gap: 2.5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "our-profile-img our-profile-headline"
+    "our-profile-img our-profile-stats";
+}
+
+.our-profile-img { grid-area: our-profile-img; }
+
+.our-profile-headline { grid-area: our-profile-headline; }
+
+.our-profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "students course"
+    "instructors enterprise";
+  grid-area: our-profile-stats;
+}
+
+.students { grid-area: students; }
+
+.course { grid-area: course; }
+
+.instructors { grid-area: instructors; }
+
+.enterprise { grid-area: enterprise; }
+
+.au-our-profile{
+  width : 100%; 
+  padding: 0 5%;
+  margin-top: 200px;
+}
+.our-profile-headline{
+  margin-top: 30px;
+  h1{
+    font-size: 48px;
+  }
+  p{
+    font-size: 24px;
+    width: 500px;
+    margin-top: 50px;
+    line-height: 180%;
+    color: rgba($color: #000000, $alpha: .7);
+  }
+}
+.our-profile-stats{
+  h1{
+    font-size: 48px;
+  }
+  span{
+    font-size: 18px;
+    color: rgba($color: #000000, $alpha: .7);
+    margin-top: 15px;
+    display: block;
+  }
+}
+
+// end our profile
+
+// footer
+.au-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footer-text footer-nav";
+}
+.au-footer{
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 200px;
+  background: $theme-color;
+  padding-bottom: 40px;
+}
+// end footer
+
+@media (max-width: 1315px){
+  .header-img{
+    display: none;
+  }
+  .au-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 3.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navigation navigation"
+      "header-text header-text";
+  }
+  .header-text{
+    margin: auto;
+  }
+}
+@media (max-width : 1095px){
+  .au-our-profile {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: .5fr 0.7fr;
+    grid-auto-columns: 1fr;
+    gap: 2.5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "our-profile-img"
+      "our-profile-headline"
+      "our-profile-stats";
+  }
+  .au-our-profile{
+    margin: auto;
+  }
+  .our-profile-img{
+    margin: auto;
+  }
+  .our-profile-headline{
+    margin: auto;
+  }
+  .our-profile-stats{
+    .students{
+      margin: auto;
+    }
+    .course{
+      margin: auto;
+    }
+    .instructors{
+      margin: auto;
+    }
+    .enterprise{
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width : 1016px){
+  .au-why {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1.4fr;
+    gap: 2.5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "why-img"
+      "why-text";
+  }
+  .why-text{
+    margin-top: 50px;
+  }
+}
+
+@media(max-width: 594px){
+  // .au-our-profile {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-template-rows: .5fr .9fr;
+  //   grid-auto-columns: 1fr;
+  //   gap: 2.5px 0px;
+  //   grid-auto-flow: row;
+  //   grid-template-areas:
+  //     "our-profile-img our-profile-headline"
+  //     "our-profile-img our-profile-stats";
+  // }
+  .our-profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "students course"
+      "instructors enterprise";
+    grid-area: our-profile-stats;
+  }
+  
+  .au-our-profile{
+    margin: 0;
+  }
+  .our-profile-img{
+    img{
+      width: 360px;
+    }
+    margin: auto;
+  }
+  .our-profile-headline{
+    margin: auto;
+    max-width: 320px;
+    p{
+      width: 320px;
+      font-size: 18px;
+    }
+  }
+  .our-profile-stats{
+    h1{
+      font-size: 36px;
+    }
+    span{
+      font-size: 14px;
+      display: block;
+      width: 100px;
+    }
+    .students{
+      margin: auto;
+    }
+    .course{
+      margin: auto;
+    }
+    .instructors{
+      margin: auto;
+    }
+    .enterprise{
+      margin: auto;
+    }
+  }
+}
+
+@media(max-width : 586px){
+  .why-img{
+    img{
+      width: 360px;
+    }
+  }
+  .why-text{
+    h1{
+      font-size: 24px;
+      text-align: center;
+    }
+    .bcs{
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media(max-width : 500px){
+  .au-footer {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-text" 
+      "footer-nav";
+  }
+}
