@@ -106,7 +106,7 @@ let language = {
     course: 'Kursus', 
     instructors : 'Instruktur',
     enterprise : 'Pelanggan wirausaha',
-    homeMob:  'homeMob',
+    homeMob:  'Home',
     courseMob : 'Kursus', 
     aboutUsMob : 'Tentang Kami',
     loginMob : "Masuk",

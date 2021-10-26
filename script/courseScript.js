@@ -54,7 +54,7 @@ const homeFot = document.getElementById('homeFot');
 const courseFot = document.getElementById('courseFot');
 const aboutUsFot = document.getElementById('aboutUsFot');
 const copyright = document.getElementById('copyright');
-s
+
 
 
 let language = {
